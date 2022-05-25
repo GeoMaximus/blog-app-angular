@@ -1,12 +1,24 @@
-<div *ngIf="!isLoading; then thenBlock else elseBlock"></div>
+<app-menu></app-menu>
+<h1>{{article.title}}</h1>
+<article class="article-container">
+  <ul class="info">
+      <li class="info_item">{{article.tag}}</li>
+      <li class="info_item">Added by
+          <span class="info_mark">{{article.author}}</span>
+      </li>
+      <li class="info_item">{{article.date}}</li>
+  </ul>
 
-<ng-template #thenBlock>
-  <span>
-    {{ article.title }}
-    <img src="{{article.imgUrl}}" alt="{{article.title }}">
-    <a routerLink="/">back</a>
-  </span>
-</ng-template>
+  <img class="img" src="{{article.imgUrl}}" alt="">
+  <div class="content">
+      <p class="article-container">{{article.content}}</p>
+  </div>
+</article>
+<footer class="footer">
+  <button class="footer_link">previous article</button>
+  <button class="footer_link">next article</button>
+</footer>
+
 
 <ng-template #elseBlock>
   <div>Loading...</div>

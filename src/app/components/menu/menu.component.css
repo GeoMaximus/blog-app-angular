@@ -24,3 +24,7 @@
     text-decoration: none;
     color: #1E1E1E;
   }
+
+  ul {
+    list-style: none;
+  }
