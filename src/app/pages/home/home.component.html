@@ -1,18 +1,17 @@
 <div *ngIf="!isLoading; then thenBlock else elseBlock"></div>
-
 <ng-template #thenBlock>
-  <button (click)="toggleModal(true)">Add article</button>
+  <div class="add">
+    <button class="btn" (click)="toggleModal(true)">Add article</button>
+  </div>
   <ul>
     <li *ngFor="let article of filteredArticleList">
-      <app-article
-        [article]="article"
-        (fetchArticles)="fetchArticles()"
-        (selectArticle)="selectArticle($event)"></app-article>
+      <app-article [article]="article" (fetchArticles)="fetchArticles()" (selectArticle)="selectArticle($event)">
+      </app-article>
     </li>
   </ul>
-  <div class="btn">
-    <button [disabled]="startIndex === 0" (click)="prevArticles()">Prev</button>
-    <button [disabled]="endIndex >= articleList.length" (click)="nextArticles()">Next</button>
+  <div class="footer">
+    <button class="footer_link" [disabled]="startIndex === 0" (click)="prevArticles()">Prev</button>
+    <button class="footer_link" [disabled]="endIndex >= articleList.length" (click)="nextArticles()">Next</button>
   </div>
 </ng-template>
 
@@ -20,10 +19,10 @@
   <div>Loading...</div>
 </ng-template>
 
-<app-modal
-  [isModalOpen]="isModalOpen"
-  [selectedArticle]="selectedArticle"
-  (toggleModal)="toggleModal($event)"
-  (resetSelectedArticle)="resetSelectedArticle()"
-  (fetchArticles)="fetchArticles()">
+<app-modal 
+    [isModalOpen]="isModalOpen" 
+    [selectedArticle]="selectedArticle" 
+    (toggleModal)="toggleModal($event)"
+    (resetSelectedArticle)="resetSelectedArticle()" 
+    (fetchArticles)="fetchArticles()">
 </app-modal>

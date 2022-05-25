@@ -1,4 +1,43 @@
 .btn {
-    display: flex;
-    justify-content: space-between;
-  }
+  color: #1E1E1E;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.3;
+  text-align: center;
+  background: white;
+  border: 1px solid #9B9B9B;
+  border-radius: 50px;
+  height: 60px;
+  width: 300px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 35px 71px 100px 71px;
+}
+
+.footer_link {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #1e1e1e;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 34px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.add {
+  display: flex;
+  justify-content: flex-end;
+  margin: 130px 0 90px 0;
+}
+
+ul {
+  list-style: none;
+}

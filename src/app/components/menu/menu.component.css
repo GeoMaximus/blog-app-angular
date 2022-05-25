@@ -1,0 +1,26 @@
+.nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .nav_container {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav_item {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    color: #1E1E1E;
+    margin: 0 0 0 100px;
+    padding: 0;
+    text-transform: uppercase;
+  }
+  
+  .nav_link {
+    text-decoration: none;
+    color: #1E1E1E;
+  }

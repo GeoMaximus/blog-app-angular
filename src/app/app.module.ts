@@ -8,9 +8,7 @@ import { DetailsComponent } from './pages/details/details.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { ArticleComponent } from './components/article/article.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { AddbuttonComponent } from './components/addbutton/addbutton.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -22,9 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     NotfoundComponent,
     ModalComponent,
     ArticleComponent,
-    FooterComponent,
-    MenuComponent,
-    AddbuttonComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,
