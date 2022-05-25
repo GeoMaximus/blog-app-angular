@@ -1,1 +1,13 @@
-<p>details works!</p>
+<div *ngIf="!isLoading; then thenBlock else elseBlock"></div>
+
+<ng-template #thenBlock>
+  <span>
+    {{ article.title }}
+    <img src="{{article.imgUrl}}" alt="{{article.title }}">
+    <a routerLink="/">back</a>
+  </span>
+</ng-template>
+
+<ng-template #elseBlock>
+  <div>Loading...</div>
+</ng-template>
