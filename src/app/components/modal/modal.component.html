@@ -1,0 +1,17 @@
+<p>modal works!</p>
+<div class="modal" [ngClass]="{'modal-open': isModalOpen}">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span (click)="closeModal()" class="close">&times;</span>
+      <form [formGroup]="articleForm">
+        <label for="name">name</label>
+        <input type="text" name="name" formControlName="name" >
+        <label for="img">img url</label>
+        <input type="text" name="img" formControlName="img">
+        <button *ngIf="selectedArticle.id === 0" type="button" (click)="saveArticle()">Save</button>
+        <button *ngIf="selectedArticle.id !== 0" type="button" (click)="updateArticle()">Update</button>
+      </form>
+    </div>
+  
+  </div>

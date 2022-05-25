@@ -1,0 +1,29 @@
+<div *ngIf="!isLoading; then thenBlock else elseBlock"></div>
+
+<ng-template #thenBlock>
+  <button (click)="toggleModal(true)">Add article</button>
+  <ul>
+    <li *ngFor="let article of filteredArticleList">
+      <app-article
+        [article]="article"
+        (fetchArticles)="fetchArticles()"
+        (selectArticle)="selectArticle($event)"></app-article>
+    </li>
+  </ul>
+  <div class="btn">
+    <button [disabled]="startIndex === 0" (click)="prevArticles()">Prev</button>
+    <button [disabled]="endIndex >= articleList.length" (click)="nextArticles()">Next</button>
+  </div>
+</ng-template>
+
+<ng-template #elseBlock>
+  <div>Loading...</div>
+</ng-template>
+
+<app-modal
+  [isModalOpen]="isModalOpen"
+  [selectedArticle]="selectedArticle"
+  (toggleModal)="toggleModal($event)"
+  (resetSelectedArticle)="resetSelectedArticle()"
+  (fetchArticles)="fetchArticles()">
+</app-modal>
